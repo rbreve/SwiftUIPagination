@@ -15,6 +15,8 @@
 		2EB73CB0237B00D500966A30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB73CAE237B00D500966A30 /* LaunchScreen.storyboard */; };
 		2EB73CB8237B00EF00966A30 /* PaginationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB73CB7237B00EF00966A30 /* PaginationView.swift */; };
 		2EB73CBA237B018700966A30 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB73CB9237B018700966A30 /* Page.swift */; };
+		2EB73CBC237B290800966A30 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 2EB73CBB237B290800966A30 /* LICENSE.md */; };
+		2EB73CBE237B297400966A30 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2EB73CBD237B297400966A30 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		2EB73CB1237B00D500966A30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EB73CB7237B00EF00966A30 /* PaginationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationView.swift; sourceTree = "<group>"; };
 		2EB73CB9237B018700966A30 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		2EB73CBB237B290800966A30 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		2EB73CBD237B297400966A30 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				2EB73CAB237B00D500966A30 /* Preview Content */,
 				2EB73CB7237B00EF00966A30 /* PaginationView.swift */,
 				2EB73CB9237B018700966A30 /* Page.swift */,
+				2EB73CBB237B290800966A30 /* LICENSE.md */,
+				2EB73CBD237B297400966A30 /* README.md */,
 			);
 			path = Pagination;
 			sourceTree = "<group>";
@@ -141,6 +147,8 @@
 			files = (
 				2EB73CB0237B00D500966A30 /* LaunchScreen.storyboard in Resources */,
 				2EB73CAD237B00D500966A30 /* Preview Assets.xcassets in Resources */,
+				2EB73CBE237B297400966A30 /* README.md in Resources */,
+				2EB73CBC237B290800966A30 /* LICENSE.md in Resources */,
 				2EB73CAA237B00D500966A30 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

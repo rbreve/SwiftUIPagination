@@ -1,11 +1,17 @@
-//
-//  ContentView.swift
-//  3D Pagination SwiftUI
-//
-//  Created by Roberto Breve  on 12.11.2019.
-//
 
-import SwiftUI
+# SwiftUI Pagination
+
+Let's you create pagination with a 3D effect like the instagram stories  
+
+
+## Usage
+
+Create your custom view
+Create a data source for your views
+Call PaginationViews with your data and custom view.
+
+
+```import SwiftUI
 
 struct PageData : Identifiable {
     var id = UUID()
@@ -24,5 +30,12 @@ struct ContentView: View {
         }
     }
 }
+```
 
- 
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
