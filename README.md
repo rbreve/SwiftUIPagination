@@ -1,6 +1,9 @@
 
 # SwiftUI Pagination
 
+![](https://raw.githubusercontent.com/rbreve/SwiftUIPagination/master/demo.gif)
+
+
 Let's you create pagination with a 3D effect like the instagram stories  
 
 
