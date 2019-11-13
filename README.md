@@ -1,5 +1,5 @@
 
-# SwiftUI Pagination
+# SwiftUI Pagination with Cube Effect
 
 ![](https://raw.githubusercontent.com/rbreve/SwiftUIPagination/master/demo.gif)
 
