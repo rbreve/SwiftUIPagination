@@ -9,21 +9,46 @@ Let's you create pagination with a 3D effect like the instagram stories
 
 ## Usage
 
-Create your custom view
-Create a data source for your views
-Call PaginationViews with your data and custom view.
+###### Create your custom view
 
+```
+struct Page: View {
+    var imageName = "photo1"
+    var imageTitle: String?
+    
+    var body: some View {
+           GeometryReader { proxy in
+                 VStack {
+                    Image(self.imageName)
+                         .resizable()
+                         .frame(width: proxy.size.width)
+                         .aspectRatio(contentMode: .fit)
+                     
+                    Text(self.imageTitle ?? "")
+                         .fontWeight(.black)
+                 }
+        }
+    }
+}
+```
 
-```import SwiftUI
+######  Create a data source for each view
 
+```
 struct PageData : Identifiable {
     var id = UUID()
     var imageName : String
     var imageTitle : String
 }
+```
+
+###### Call PaginationView with your data and View.
+
+
+```
 
 struct ContentView: View {
-    // Data Source
+    // Create your pages 
     let pages = [PageData(imageName: "photo1", imageTitle: "Helsinki"), PageData(imageName: "photo2", imageTitle: "Boats"), PageData(imageName: "photo3", imageTitle: "River Dock")]
     
     var body: some View {
