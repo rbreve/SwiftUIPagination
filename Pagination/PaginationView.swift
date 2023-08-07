@@ -71,6 +71,14 @@ struct PaginationView <Content, Pages> : View where Content: View, Pages: Random
         return 0
     }
     
+    func getOpacity(position : CGFloat, width: CGFloat) -> Double {
+        let pos = position + (self.translation?.width ?? 0)
+        if (pos != 0 ) {
+            return (1.0 - (abs(pos)/width))
+        }
+        return 1
+    }
+    
     func getAnchor(position : CGFloat, width: CGFloat) -> UnitPoint {
         let pos = position + self.lastTranslation
         if(isLeftSided(position: pos, width: width)) {
@@ -91,7 +99,9 @@ struct PaginationView <Content, Pages> : View where Content: View, Pages: Random
     private func bodyHelper(containerSize: CGSize, offsets: [Pages.Element.ID: (position: CGFloat, rotation: CGFloat)]) -> some View {
         ZStack {
             ForEach(self.pages){
-                self.content($0).rotation3DEffect(.degrees(self.getRotation(position: (offsets[$0.id]?.position ?? 0) + self.initPosition, width: containerSize.width )), axis: (x: 0, y: 1, z: 0), anchor: self.getAnchor(position: (offsets[$0.id]?.position ?? 0) + self.initPosition, width: containerSize.width))
+                self.content($0)
+                    .opacity(self.getOpacity(position: (offsets[$0.id]?.position ?? 0) + self.initPosition, width: containerSize.width ))
+                    .rotation3DEffect(.degrees(self.getRotation(position: (offsets[$0.id]?.position ?? 0) + self.initPosition, width: containerSize.width )), axis: (x: 0, y: 1, z: 0), anchor: self.getAnchor(position: (offsets[$0.id]?.position ?? 0) + self.initPosition, width: containerSize.width))
                     .offset(x: (offsets[$0.id]?.position ?? 0 ) + (self.translation?.width ?? 0) + self.initPosition )
                     .gesture(DragGesture()
                         .onChanged({ (value) in
